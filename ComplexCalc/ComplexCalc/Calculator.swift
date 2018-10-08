@@ -66,7 +66,10 @@ class Calculator {
         return ["x": lhs["x"]! - rhs["x"]!, "y": lhs["y"]! - rhs["y"]!]
     }
     
-    
-  
-    
+    func mathOp(lhs:Int, rhs:Int, op:(_:Int, _:Int) -> Int) -> Int {
+        return op(lhs, rhs)
+    }
+    func mathOp(args:[Int], beg: Int, op:(_:Int, _:Int) -> Int) -> Int {
+        return args.reduce(beg, op)
+    }
 }

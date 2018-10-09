@@ -31,7 +31,7 @@ class Calculator {
             x - y
         })}
     func multiply(_ arr:[Int]) -> Int {
-        return arr.reduce(0, { x, y in
+        return arr.reduce(1, { x, y in
             x * y
         })}
     func divide(_ arr:[Int]) -> Int {
